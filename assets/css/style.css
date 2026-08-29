@@ -534,6 +534,8 @@ table{border-collapse:collapse;width:100%}
 .cta__tel .lb{display:block;font-size:1.3rem;font-weight:700;color:var(--ink-sub)}
 .cta__tel b{display:flex;align-items:center;gap:1.2rem;font-family:Arial,Helvetica,sans-serif;font-size:4rem;font-weight:700;line-height:1.25;letter-spacing:-.01em}
 .cta__tel b svg{width:3rem;height:3rem;fill:var(--red)}
+.cta__mail b{font-size:2.6rem;word-break:break-all}
+.cta__mail b svg{width:2.6rem;height:2.6rem;flex:none}
 .cta__tel span{display:block;font-size:1.3rem;color:var(--ink-sub)}
 .cta__btn{
   display:flex;flex-direction:column;justify-content:center;align-items:center;gap:.6rem;
@@ -631,6 +633,8 @@ table{border-collapse:collapse;width:100%}
 .Footer__brand .Logo{padding:0;border:0;margin-bottom:2rem;align-items:flex-start}
 .Footer__brand address{font-style:normal;font-size:1.4rem;color:var(--ink-sub);line-height:2}
 .Footer__brand .tel{display:block;margin-top:1.4rem;font-family:Arial,Helvetica,sans-serif;font-size:2.4rem;font-weight:700}
+.Footer__brand .mail{display:block;margin-top:.6rem;font-family:Arial,Helvetica,sans-serif;font-size:1.5rem;font-weight:700;color:var(--ink-sub);word-break:break-all}
+.Footer__brand .mail:hover{color:var(--red);opacity:1}
 .Footer h3{font-size:1.4rem;font-weight:700;margin-bottom:1.6rem;letter-spacing:.06em}
 .Footer ul li{font-size:1.4rem;line-height:1;margin-bottom:1.4rem}
 .Footer ul li a{color:var(--ink-sub);position:relative;padding-left:1.4rem}
@@ -763,6 +767,8 @@ table{border-collapse:collapse;width:100%}
   .cta__tel{padding:2rem}
   .cta__tel b{font-size:clamp(2.6rem,8.6vw,3.8rem);gap:.8rem}
   .cta__tel b svg{width:2.4rem;height:2.4rem}
+  .cta__mail b{font-size:clamp(1.8rem,5.6vw,2.4rem)}
+  .cta__mail b svg{width:2rem;height:2rem}
 
   .PageHead__in{padding:5.6rem 0}
   .PageHead h1{font-size:2.6rem}

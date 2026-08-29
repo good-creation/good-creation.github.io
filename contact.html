@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>お問い合わせ・試食のご相談｜合同会社O.C.K</title>
-<meta name="description" content="合同会社O.C.Kへのお問い合わせ。厨房業務委託・完全調理済食材のご相談、試食・お見積り、採用のご質問。TEL 097-594-9074。">
+<meta name="description" content="合同会社O.C.Kへのお問い合わせ。厨房業務委託・完全調理済食材のご相談、試食・お見積り、採用のご質問。TEL 097-594-9074／info@ock-oita.com。">
 <meta property="og:title" content="お問い合わせ・試食のご相談｜合同会社O.C.K">
-<meta property="og:description" content="合同会社O.C.Kへのお問い合わせ。厨房業務委託・完全調理済食材のご相談、試食・お見積り、採用のご質問。TEL 097-594-9074。">
+<meta property="og:description" content="合同会社O.C.Kへのお問い合わせ。厨房業務委託・完全調理済食材のご相談、試食・お見積り、採用のご質問。TEL 097-594-9074／info@ock-oita.com。">
 <meta property="og:type" content="article">
 <meta property="og:image" content="assets/img/banner-02.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -67,7 +67,7 @@
 <main id="main" class="Main">
 
   <div class="PageHead">
-    <img src="assets/img/meal-01.jpg" alt="" aria-hidden="true">
+    <img src="assets/img/contact-hero.jpg" alt="" aria-hidden="true">
     <div class="PageHead__in">
       <h1><span class="en">CONTACT</span>お問い合わせ・試食のご相談</h1>
     </div>
@@ -91,9 +91,14 @@
           <b><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.2.4 2.4.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1z"/></svg>097-594-9074</b>
           <span>受付時間 9:00〜16:00（土日休み）／FAX 097-594-9084</span>
         </a>
+        <a class="cta__tel cta__mail" href="mailto:info@ock-oita.com?subject=%E3%81%8A%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B" style="border:1px solid var(--line-2)">
+          <span class="lb">メールでのご相談</span>
+          <b><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18c.6 0 1 .4 1 1v12c0 .6-.4 1-1 1H3c-.6 0-1-.4-1-1V6c0-.6.4-1 1-1zm9 8.1L4.6 7H19.4L12 13.1zM4 17h16V8.6l-7.4 6.1c-.4.3-.9.3-1.2 0L4 8.6V17z"/></svg>info@ock-oita.com</b>
+          <span>24時間受付（ご返信は営業時間内）</span>
+        </a>
       </div>
 
-      <form class="form-block rv" data-demo>
+      <form class="form-block rv" data-mailto="info@ock-oita.com">
         <div class="form-row">
           <label for="f-type">お問い合わせ種別<span class="req">必須</span></label>
           <div><select id="f-type" name="type" required>
@@ -112,14 +117,16 @@
           <div><input id="f-name" name="name" type="text" required autocomplete="name" placeholder="例）大分 太郎"></div></div>
         <div class="form-row"><label for="f-tel">お電話番号<span class="req">必須</span></label>
           <div><input id="f-tel" name="tel" type="tel" required autocomplete="tel" placeholder="例）097-594-9074"></div></div>
-        <div class="form-row"><label for="f-mail">メールアドレス</label>
-          <div><input id="f-mail" name="email" type="email" autocomplete="email" placeholder="例）info@example.jp"></div></div>
+        <div class="form-row"><label for="f-mail">メールアドレス<span class="req">必須</span></label>
+          <div><input id="f-mail" name="email" type="email" required autocomplete="email" placeholder="例）info@example.jp"></div></div>
         <div class="form-row"><label for="f-meals">1日あたりの食数（目安）</label>
           <div><input id="f-meals" name="meals" type="text" placeholder="例）朝30食・昼30食・夕30食"></div></div>
         <div class="form-row"><label for="f-body">お問い合わせ内容<span class="req">必須</span></label>
           <div><textarea id="f-body" name="body" rows="7" required placeholder="現在の厨房体制やお困りごとをご記入ください。"></textarea></div></div>
         <div class="form-submit">
           <button class="common_btn" type="submit">この内容で送信する</button>
+          <p class="form-note-s">送信ボタンを押すと、ご利用のメールソフトが起動し、入力内容を本文にしたメールが <a href="mailto:info@ock-oita.com" style="text-decoration:underline">info@ock-oita.com</a> 宛に作成されます。内容をご確認のうえ送信してください。</p>
+          <p class="form-note-s" id="form-sent" hidden>メールソフトが起動しない場合は、お手数ですが <a href="mailto:info@ock-oita.com" style="text-decoration:underline">info@ock-oita.com</a> 宛に直接ご連絡いただくか、097-594-9074 までお電話ください。</p>
           <p class="form-note-s">ご入力いただいた個人情報は、お問い合わせへの回答以外には使用いたしません。<br><a href="privacy.html" style="text-decoration:underline">プライバシーポリシー</a></p>
         </div>
       </form>
@@ -155,6 +162,7 @@
           FAX 097-594-9084
         </address>
         <a class="tel" href="tel:0975949074">097-594-9074</a>
+        <a class="mail" href="mailto:info@ock-oita.com">info@ock-oita.com</a>
       </div>
       <div>
         <h3>サービス</h3>
@@ -181,6 +189,7 @@
           <li><a href="contact.html">お問い合わせフォーム</a></li>
           <li><a href="contact.html#shishoku">試食のご相談</a></li>
           <li><a href="tel:0975949074">お電話（097-594-9074）</a></li>
+          <li><a href="mailto:info@ock-oita.com">メール（info@ock-oita.com）</a></li>
           <li><a href="privacy.html">プライバシーポリシー</a></li>
         </ul>
       </div>

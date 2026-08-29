@@ -362,13 +362,50 @@
   }
 
   /* ---------------------------------------------------------
-     Demo form
+     お問い合わせフォーム（メールソフトで送信）
+     data-mailto に指定した宛先に、入力内容を本文にして送る
      --------------------------------------------------------- */
-  var form = $('form[data-demo]');
+  var form = $('form[data-mailto]');
   if (form) {
+    var LABELS = {
+      type:  'お問い合わせ種別',
+      org:   '施設名・法人名',
+      name:  'ご担当者名',
+      tel:   'お電話番号',
+      email: 'メールアドレス',
+      meals: '1日あたりの食数（目安）',
+      body:  'お問い合わせ内容'
+    };
+    var ORDER = ['type', 'org', 'name', 'tel', 'email', 'meals', 'body'];
+
     form.addEventListener('submit', function (e) {
       e.preventDefault();
-      window.alert('こちらはデモ用のフォームです。送信先の設定後にご利用ください。\nお急ぎの場合は 097-594-9074 までお電話ください。');
+      if (typeof form.reportValidity === 'function' && !form.reportValidity()) return;
+
+      var to = form.getAttribute('data-mailto');
+      var data = new FormData(form);
+      var type = (data.get('type') || 'お問い合わせ') + '';
+      var org = (data.get('org') || '') + '';
+      var subject = '【お問い合わせ】' + type + (org ? '／' + org : '');
+
+      var lines = ['合同会社O.C.K 御中', '', 'ウェブサイトのお問い合わせフォームより送信いたします。', ''];
+      ORDER.forEach(function (key) {
+        var val = ((data.get(key) || '') + '').trim();
+        if (!val) return;
+        lines.push('■ ' + LABELS[key]);
+        lines.push(val);
+        lines.push('');
+      });
+      lines.push('----------------------------------------');
+      lines.push('送信元：' + window.location.href);
+
+      var href = 'mailto:' + to +
+        '?subject=' + encodeURIComponent(subject) +
+        '&body=' + encodeURIComponent(lines.join('\n'));
+
+      var note = $('#form-sent');
+      if (note) note.hidden = false;
+      window.location.href = href;
     });
   }
 })();
